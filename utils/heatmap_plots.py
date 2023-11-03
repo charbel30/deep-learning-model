@@ -4,29 +4,28 @@ import seaborn as sns
 
 
 def plot_heat_map(results_df, scores='all', separate_graphs=True):
-    # Melt the DataFrame to get each score as a separate row for each model
-    melted_results = results_df.melt(id_vars=['Model', 'Target'], var_name='Score Type', value_name='Score')
+    # Melt the DataFrame to get each score as a separate row for each target
+    melted_results = results_df.melt(id_vars=['Target'], var_name='Score Type', value_name='Score')
 
     # If scores is 'all', plot all scores
     if scores == 'all':
-        scores = ['Balanced Accuracy', 'Precision', 'Recall', 'AUC-ROC']
+        scores = ['Balanced Accuracy', 'Precision', 'Recall']
 
     if separate_graphs:
         # If separate_graphs is True, plot a separate graph for each specified score
         for score in scores:
-            heat_map = melted_results[melted_results['Score Type'] == score].pivot(index='Model', columns='Target', values='Score')
+            heat_map = melted_results[melted_results['Score Type'] == score].pivot(index='Target', columns='Score Type', values='Score')
             plt.figure(figsize=(14, 4))
             sns.heatmap(heat_map * 100, annot=True, cmap="YlGnBu", fmt='.2f', vmin=0, vmax=100)
             plt.title(score)
             plt.show()
     else:
         # If separate_graphs is False, plot all scores in one graph 
-        heat_map = melted_results.pivot(index='Model', columns='Score Type', values='Score')
+        heat_map = melted_results.pivot(index='Target', columns='Score Type', values='Score')
         plt.figure(figsize=(14, 8))
         sns.heatmap(heat_map * 100, annot=True, cmap="YlGnBu", fmt='.2f', vmin=0, vmax=100)
-        plt.title('Scores for Each Model')
+        plt.title('Scores for Each Target')
         plt.show()
-
 # Assuming 'results' is your DataFrame
 # Call the function with a list of scores or 'all'
 #plot_heat_map(results, scores=['Balanced Accuracy'], separate_graphs=True)

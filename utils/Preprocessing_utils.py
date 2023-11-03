@@ -52,7 +52,7 @@ def output_selection_prepro(df, target):
     df1 = df.copy().dropna(subset = [target])
 
     # Define the imputer for all columns
-    num_imputer = IterativeImputer(max_iter=400, imputation_order='random', initial_strategy='median')
+    num_imputer = IterativeImputer(max_iter=300,imputation_order='random')
     cat_imputer = SimpleImputer(strategy='most_frequent')
     # Fit and transform the DataFrame with the imputer
     df1[num_cols] = num_imputer.fit_transform(df1[num_cols])
