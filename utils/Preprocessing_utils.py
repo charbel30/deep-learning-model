@@ -83,7 +83,7 @@ def output_selection_prepro(df, target):
     print(f'Dropping targets: {targets}')
     df1 = df1.drop(targets, axis=1)
     
-    #df1 = pd.get_dummies(df1, columns=cat_cols, drop_first=True)
+    df1 = pd.get_dummies(df1, columns=cat_cols, drop_first=True)
     y.index = df1.index
     # Save the DataFrame to a csv file
     df_imputed = pd.concat([df1, y], axis=1)
