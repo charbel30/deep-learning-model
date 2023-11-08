@@ -1,3 +1,5 @@
+# might be useful if the model is underfitting.
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -11,7 +13,7 @@ class Net(nn.Module):
         self.fc5 = nn.Linear(128, 64)
         self.fc6 = nn.Linear(64, 32)
         self.fc7 = nn.Linear(32, 1)
-        self.dropout = nn.Dropout(p=0.2)  
+        self.dropout = nn.Dropout(p=0.2) # decrease the dropout rate to prevent underfitting.
         self.batch_norm1 = nn.BatchNorm1d(1024)
         self.batch_norm2 = nn.BatchNorm1d(512)
         self.batch_norm3 = nn.BatchNorm1d(256)

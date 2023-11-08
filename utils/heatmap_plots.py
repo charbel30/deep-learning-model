@@ -29,6 +29,9 @@ def plot_heat_map(results_df, scores='all', separate_graphs=True):
 # Assuming 'results' is your DataFrame
 # Call the function with a list of scores or 'all'
 #plot_heat_map(results, scores=['Balanced Accuracy'], separate_graphs=True)
+
+
+# this function is used to plot the metrics of the model like accuracy, loss, precision, recall, balance_accuracy 
 def plot_metrics(metrics, plots):
     plt.figure(figsize=(5*len(plots),4))
     
