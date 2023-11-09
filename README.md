@@ -4,14 +4,6 @@
 <br></h1>
 <h3>◦ Code better, collaborate faster!</h3>
 <h3>◦ Developed with the software and tools below.</h3>
-
-<p align="center">
-<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=flat-square&logo=tqdm&logoColor=black" alt="tqdm" />
-<img src="https://img.shields.io/badge/Jupyter-F37626.svg?style=flat-square&logo=Jupyter&logoColor=white" alt="Jupyter" />
-<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="pandas" />
-<img src="https://img.shields.io/badge/NumPy-013243.svg?style=flat-square&logo=NumPy&logoColor=white" alt="NumPy" />
-</p>
 </div>
 
 ---
@@ -26,10 +18,6 @@
     - [ Installation](#-installation)
     - [ Running ](#-running-)
     - [ Tests](#-tests)
-- [ Roadmap](#-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -37,12 +25,6 @@
 ##  Overview
 
 The repository contains a deep learning model for single-visit analysis. It includes notebooks for data preprocessing, model building, and evaluation. The code enables fast execution without evaluation on each epoch. Other features include early stopping, data balancing, and learning rate scheduling. The model can be tested using the predict_model.py file, which calculates various metrics. The utils folder contains modules for preprocessing, plotting heatmaps, and implementing early stopping. Overall, the repository provides a streamlined pipeline for deep learning analysis on single-visit data.
-
----
-
-##  Features
-
-Exception: 
 
 ---
 
