@@ -97,7 +97,8 @@ cd
 pip install -r requirements.txt
 ```
 
-###  Run in a jupyter environment or convert to py and run it 
+4. Run in a jupyter environment or convert to py and run it
+
 
 ---
 
