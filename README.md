@@ -2,16 +2,8 @@
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
 <br></h1>
-<h3>◦ Code together, conquer forever!</h3>
-<h3>◦ Developed with the software and tools below.</h3>
 
-<p align="center">
-<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=flat-square&logo=tqdm&logoColor=black" alt="tqdm" />
-<img src="https://img.shields.io/badge/Jupyter-F37626.svg?style=flat-square&logo=Jupyter&logoColor=white" alt="Jupyter" />
-<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="pandas" />
-<img src="https://img.shields.io/badge/NumPy-013243.svg?style=flat-square&logo=NumPy&logoColor=white" alt="NumPy" />
-</p>
+
 </div>
 
 ---
@@ -26,23 +18,13 @@
     - [ Installation](#-installation)
     - [ Running ](#-running-)
     - [ Tests](#-tests)
-- [ Roadmap](#-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
 
 ---
 
 
 ##  Overview
 
-Exception: 
-
----
-
-##  Features
-
-Exception: 
+The repository contains a deep learning model for single-visit tasks. It includes Jupyter Notebook files for data preprocessing, model training, and evaluation. It also provides functions for testing the model on a test dataset and generating metrics such as balanced accuracy, precision, and recall. The repository includes various models of different complexities, as well as utilities for early stopping, plotting heatmaps and metrics, and data preprocessing. The codebase has dependencies on Python libraries such as numpy, pandas, scikit-learn, seaborn, and torch.
 
 ---
 
@@ -71,7 +53,7 @@ Exception:
 
 | File                                 | Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---                                  | ---                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [fast_pipe.ipynb]({file})            | The code above is a Jupyter Notebook file called `fast_pipe.ipynb` located in the directory `Single-visit/deep learning model/`. It imports various libraries and modules for data preprocessing, model training, and evaluation. It reads a CSV file (`dukecathr.csv`), sets the device to either CUDA or CPU for training, and initializes variables for storing metrics. It also defines a function `train_epoch` for training the model using a given dataloader, criterion, and optimizer. The function trains the model, computes the loss and accuracy, updates the optimizer, and returns the running loss.                                   |
+| [fast_pipe.ipynb]({file})            | The code in the fast_pipe.ipynb file is a streamlined version of a deep learning model pipeline. It imports necessary libraries and modules, including pandas, numpy, torch, and sklearn. It also includes functions for preprocessing and plotting. The code does not run evaluation on each epoch, making it faster than the main pipeline. The code also includes a function to test the model using the predict_model.py file.                                  |
 | [pipeline.ipynb]({file})             | The code in the "pipeline.ipynb" notebook trains a deep learning model using the Duke-Catheter data. It imports necessary libraries and modules, reads the data, and initializes variables. It also defines a function called "train_epoch" that trains the model for one epoch. The function uses a provided dataloader, loss function, optimizer, learning rate scheduler, and warm-up scheduler to train the model and calculate the training loss and accuracy. The goal is to train the model on the data and evaluate its performance.                                                                                                          |
 | [predict_model.py]({file})           | The code is a function called `test_model` that evaluates the performance of a pre-trained deep learning model on a test dataset. It loads the saved model and test data, sets the input size of the model, creates a DataLoader for the test data, makes predictions on the test set, and calculates metrics such as accuracy, precision, recall, and balanced accuracy. The function returns these metrics along with the target variable name.                                                                                                                                                                                                     |
 | [requirements.txt]({file})           | The code presents a requirements.txt file that specifies the dependencies for a deep learning model. These dependencies include imbalanced_learn, imblearn, matplotlib, numpy, pandas, pytorch_warmup, scikit_learn, seaborn, torch, and tqdm. These dependencies are necessary for running the pipeline and predicting the model accurately.                                                                                                                                                                                                                                                                                                         |
