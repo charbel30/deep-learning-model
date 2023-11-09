@@ -97,16 +97,7 @@ cd
 pip install -r requirements.txt
 ```
 
-###  Running 
-
-```sh
-python main.py
-```
-
-###  Tests
-```sh
-pytest
-```
+###  Run in a jupyter environment or convert to py and run it 
 
 ---
 
