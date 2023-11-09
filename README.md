@@ -74,9 +74,9 @@ The repository contains a deep learning model for single-visit analysis. It incl
 
 Please ensure you have the following dependencies installed on your system:
 
-`- ℹ️ Dependency 1`
+`- ℹ️ Python 3.11.4`
 
-`- ℹ️ Dependency 2`
+`- ℹ️ Anaconda(Optional)`
 
 `- ℹ️ ...`
 
